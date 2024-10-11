@@ -1,14 +1,22 @@
 
 import React from 'react';
-import ChatScreen from './components/LandingPage';
-import MessagingUI from './components/Chart';
- 
+import LeftSidebar from './components/LeftSidebar';
+import ChatApp from './components/ChatComponent';
+import RightSidebar from './components/RightSidebar';
+import { Box, styled } from '@mui/material';
+
 function App() {
+const MainContainer = styled(Box)`
+display: flex;
+height: 100vh;
+
+`;
   return (
-    <div>
-      {/* <ChatScreen /> */}
-      <MessagingUI />
-    </div>
+    <MainContainer>
+      <LeftSidebar />
+      <ChatApp />
+      <RightSidebar /> 
+    </MainContainer>
   );
 }
 
